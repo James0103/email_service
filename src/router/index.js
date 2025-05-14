@@ -60,38 +60,17 @@ const router = createRouter({
       component: () => import('../views/SerialNumbersUploadView.vue'),
       beforeEnter: requireAuth
     },
-    // {
-    //   path: '/email-templates',
-    //   name: 'emailTemplates',
-    //   component: () => import('../views/EmailTemplatesView.vue'),
-    //   beforeEnter: requireAuth
-    // },
+    {
+      path: '/email-templates',
+      name: 'emailTemplates',
+      component: () => import('../views/EmailTemplatesView.vue'),
+      beforeEnter: requireAuth
+    },
     {
       path: '/settings',
+      name: 'settings',
       component: () => import('../views/SettingsView.vue'),
-      beforeEnter: requireAuth,
-      children: [
-        {
-          path: '',
-          name: 'settings',
-          redirect: '/settings/profile'
-        },
-        {
-          path: 'profile',
-          name: 'profile',
-          component: () => import('../views/settings/ProfileSettings.vue')
-        },
-        {
-          path: 'naver',
-          name: 'naverSettings',
-          component: () => import('../views/settings/NaverSettings.vue')
-        },
-        {
-          path: 'smtp',
-          name: 'smtpSettings',
-          component: () => import('../views/settings/SmtpSettings.vue')
-        }
-      ]
+      beforeEnter: requireAuth
     },
     {
       path: '/logs',

@@ -20,8 +20,8 @@
             </li>
             <li>
               <router-link to="/serial-numbers" class="nav-link">
-                <span class="nav-icon">🔑</span>
-                <span>시리얼 번호 관리</span>
+                <span class="nav-icon">🔢</span>
+                <span>시리얼 번호</span>
               </router-link>
             </li>
             <li>
